@@ -235,7 +235,7 @@ function checkedDataAnswer() {
             let inputData = document.querySelector('input[value="' + tt + '"]');
 
                     inputData.setAttribute("checked", "checked");
-                        submitQuizButton.classList.add("hide");
+                        
            
         }
          getSubmitQuiz()
