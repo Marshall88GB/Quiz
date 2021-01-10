@@ -3,7 +3,7 @@ body {
     font-family: 'Noto Sans HK', sans-serif;
 }
 .divWrapper {
-    width: 600px;
+    width: 80%;
    margin: 10px auto;
 }
 
@@ -24,9 +24,8 @@ body {
     color: rgb(0, 0, 0);
     width: 150px;
     height: 75px;
-    position: relative;
-    margin-top: 200px;
-    margin-left: 200px;
+   
+
 }
 .QuestionDiv {
     border : 1px solid rgb(156, 152, 152);
