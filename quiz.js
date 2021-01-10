@@ -35,7 +35,7 @@ function submitButton() {
 }
 /***Back button***/
 function backButton() {
-    submitQuizButton.classList.add("hide");
+    submitQuizButton.classList.add("show");
         backQuizButton = document.createElement("button");
             backQuizButton.innerHTML = "Back";
                 backQuizButton.classList.add("sbButton");
