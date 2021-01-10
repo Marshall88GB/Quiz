@@ -108,7 +108,7 @@ function Quiz(question, options, answer, property) {
 function getDataQuiz() {
 
     startQuizButton.classList.add("hide");
-    fetch('quiz.json')
+    fetch('/quiz.json')
         .then(function (respons) {
 
             if (respons.status !== 200) {
