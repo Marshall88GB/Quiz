@@ -24,7 +24,6 @@ function startButton() {
 }
 /***Submit button***/
 function submitButton() {
-      submitQuizButton.classList.add("show");
     submitQuizButton = document.createElement("button");
         submitQuizButton.innerHTML = "Submit";
             submitQuizButton.classList.add("sbButton");
@@ -36,7 +35,7 @@ function submitButton() {
 }
 /***Back button***/
 function backButton() {
-    submitQuizButton.classList.add("show");
+    submitQuizButton.classList.add("hide");
         backQuizButton = document.createElement("button");
             backQuizButton.innerHTML = "Back";
                 backQuizButton.classList.add("sbButton");
@@ -108,7 +107,7 @@ function Quiz(question, options, answer, property) {
 /*** Get Question Data***/
 function getDataQuiz() {
 
- 
+    startQuizButton.classList.add("hide");
     fetch('quiz.json')
         .then(function (respons) {
 
@@ -120,7 +119,6 @@ function getDataQuiz() {
             return respons.json();
         })
         .then(function (data) {
-         startQuizButton.classList.add("hide");
 
             var quizQuestion = data.quiz;
 
@@ -155,7 +153,6 @@ function getDataQuiz() {
 }
 /***Get Submit Data***/
 function getSubmitQuiz() {
- 
     let dataAnswer = questionAnswer.split('\n');
             dataAnswer.pop();
     var formData = new FormData(document.forms.forma);
@@ -218,7 +215,6 @@ function getSubmitQuiz() {
 
         }
         alert("Your score is " + corectNumberAnswer + " / " + dataInputAnswer.length);
-           submitQuizButton.classList.replace("show","hide");
         backButton();
 
 
@@ -238,12 +234,12 @@ function checkedDataAnswer() {
             let inputData = document.querySelector('input[value="' + tt + '"]');
 
                     inputData.setAttribute("checked", "checked");
-                        
-           
+                        submitQuizButton.classList.add("hide");
+
         }
          getSubmitQuiz()
 
     }
 
 }
-///////////////////////////////////////////////// ** code write by Marshall_GB ** /////////////////////////////////////////////////
+///////////////////////////////////////////////// ** code write by Marshall_GB ** ///////////////////////////////////////////////// 
