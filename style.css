@@ -60,9 +60,10 @@ overflow-x: hidden;
 .errorIcon {
     color: rgb(255, 0, 0);
 }
-.show {
-    display: block;
-}
+
 .hide {
     display: none;
+}
+.show {
+    display: block;
 }
