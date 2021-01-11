@@ -24,6 +24,7 @@ function startButton() {
 }
 /***Submit button***/
 function submitButton() {
+      submitQuizButton.classList.replace("hide","show");
     submitQuizButton = document.createElement("button");
         submitQuizButton.innerHTML = "Submit";
             submitQuizButton.classList.add("sbButton");
@@ -107,7 +108,7 @@ function Quiz(question, options, answer, property) {
 /*** Get Question Data***/
 function getDataQuiz() {
 
-   
+ 
     fetch('quiz.json')
         .then(function (respons) {
 
@@ -154,6 +155,7 @@ function getDataQuiz() {
 }
 /***Get Submit Data***/
 function getSubmitQuiz() {
+ 
     let dataAnswer = questionAnswer.split('\n');
             dataAnswer.pop();
     var formData = new FormData(document.forms.forma);
@@ -216,6 +218,7 @@ function getSubmitQuiz() {
 
         }
         alert("Your score is " + corectNumberAnswer + " / " + dataInputAnswer.length);
+           submitQuizButton.classList.replace("show","hide");
         backButton();
 
 
