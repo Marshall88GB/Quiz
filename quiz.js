@@ -24,7 +24,7 @@ function startButton() {
 }
 /***Submit button***/
 function submitButton() {
-      submitQuizButton.classList.replace("hide","show");
+      submitQuizButton.classList.add("show");
     submitQuizButton = document.createElement("button");
         submitQuizButton.innerHTML = "Submit";
             submitQuizButton.classList.add("sbButton");
